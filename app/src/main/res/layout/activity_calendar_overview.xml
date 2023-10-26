@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".CalendarOverviewActivity">
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="60dp"
+        android:background="#FEFEFE"
+        android:dateTextAppearance="@style/CalendarViewText"
+        android:weekDayTextAppearance="@style/CalendarViewText"
+        android:theme="@style/CustomCalendarMonth"
+        />
+
+    <Spinner
+        android:id="@+id/Spinner"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/calendarView"
+        android:inputType="text"
+        android:text="Veranstalter"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginStart="30dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextOrt"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Spinner"
+        android:inputType="text"
+        android:text="Ort"
+        style = "@style/TextStyle"
+        android:layout_marginStart="30dp"
+        />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="text"
+        style = "@style/TextStyle"
+        android:text="Eventbezeichnung"
+        android:layout_below="@+id/editTextOrt"
+        android:layout_marginStart="30dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextStartTime"
+        android:layout_width="157dp"
+        android:layout_height="48dp"
+        style = "@style/TextStyle"
+        android:inputType="time"
+        android:text="18:00"
+        android:layout_below="@+id/editText"
+        android:layout_marginStart="30dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextEndTime"
+        android:layout_width="157dp"
+        android:layout_height="48dp"
+        android:inputType="time"
+        android:text="22:00"
+        style = "@style/TextStyle"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/editTextStartTime"
+        android:layout_marginStart="30dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="49dp"
+        android:onClick="buttonSave"
+        android:background="@drawable/button_border"
+        style="@style/ButtonStyle"
+        android:text="Speichern"
+        android:layout_below="@+id/editTextEndTime"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSuggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="49dp"
+        android:onClick="buttonSuggest"
+        android:background="@drawable/button_border"
+        style="@style/ButtonStyle"
+        android:text="Vorschlag"
+        android:layout_below="@+id/editTextEndTime"
+        />
+
+</RelativeLayout>

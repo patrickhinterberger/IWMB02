@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    tools:context=".AppointmentActivity">
+
+    <TextView
+        android:id="@+id/overView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Eckdaten zum Termin"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+    <TextView
+        android:id="@+id/editTextOwner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/overView"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+
+    <TextView
+        android:id="@+id/selectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/editTextOwner"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+    <TextView
+        android:id="@+id/Ort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/selectedDate"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+    <TextView
+        android:id="@+id/Eventbezeichnung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/Ort"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+
+        <TextView
+            android:id="@+id/Startzeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Eventbezeichnung"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="90dp"
+            style = "@style/TextStyle"
+            />
+
+        <TextView
+            android:id="@+id/Endzeit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/Eventbezeichnung"
+            android:layout_toRightOf="@+id/Startzeit"
+            android:layout_centerHorizontal="true"
+            style = "@style/TextStyle"
+            />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:background="@color/Gold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Endzeit"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/rateGastText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Bewertung Gastfreundlichkeit"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/Endzeit"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBarGast"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/Gold"
+        android:layout_below="@+id/rateGastText"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/rateFoodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Bewertung Essen"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/ratingBarGast"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBarFood"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/Gold"
+        android:layout_below="@+id/rateFoodText"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/rateOverallText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Gesamtbewertung"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/ratingBarFood"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBarOverall"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/Gold"
+        android:layout_below="@+id/rateOverallText"
+        android:layout_centerHorizontal="true"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveRatings"
+        style="@style/ButtonStyle"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/ratingBarOverall"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_border"
+        android:onClick="saveRatings"
+        android:text="Speichern" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:id="@+id/bottomLine"
+        android:background="@color/Gold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/saveRatings"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/voteForGames"
+        style="@style/ButtonStyle"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/bottomLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_border"
+        android:onClick="voteForGames"
+        android:text="Spielvoting" />
+
+</RelativeLayout>

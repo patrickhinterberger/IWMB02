@@ -1,0 +1,36 @@
+Einzeldaten auslesen:
+
+                    HashMap<String, Object> dataMap = (HashMap<String, Object>) dataSnapshot.getValue();
+
+                    Object keyObject = dataMap.keySet().toArray()[0];
+                    Object dataObject = dataMap.get(keyObject);
+
+                    try {
+                        HashMap<String, Object> valueData = (HashMap<String, Object>) dataObject;
+
+                        String Ort = (String) valueData.get("Ort");
+                        String Endzeit = (String) valueData.get("Endzeit");
+                        String Startzeit = (String) valueData.get("Startzeit");
+                        String Eventbezeichnung = (String) valueData.get("Eventbezeichnung");
+
+                        //nextAppointmentDate.setText(keyObject.toString());
+
+                        Log.d("Ort", "Daten:" + Ort);
+                        Log.d("Endzeit", "Daten:" + Endzeit);
+                        Log.d("Startzeit", "Daten:" + Startzeit);
+                        Log.d("Eventbezeichnung", "Daten:" + Eventbezeichnung);
+                        Log.d("Key", "Daten:" + keyObject.toString());
+
+
+                    } catch (ClassCastException cce) {
+
+                        try{
+
+                            String mString = String.valueOf(dataMap.get(keyObject));
+                            //addTextToView(mString);
+
+                        }catch (ClassCastException cce2){
+
+                        }
+
+                    }

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:id="@+id/headLayout"
+    android:background="#FEFEFE"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Herzlich Willkommen,"
+        android:id="@+id/welcome"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        style = "@style/TextStyle"
+        android:layout_centerHorizontal="true"
+     />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_details"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        style = "@style/TextStyle"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/welcome"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextText"
+        android:layout_below="@+id/user_details"
+        android:text="Ihre Spieltermine:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        style = "@style/TextStyle"
+        />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/nextText"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutx"
+        android:layout_below="@+id/listView"
+        android:layout_marginBottom="10dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/next_session"
+            style="@style/ButtonStyle"
+            android:layout_below="@+id/listView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_border"
+            android:onClick="buttonSync"
+            android:text="Aktualisieren" />
+
+        <TextView
+            android:id="@+id/nextAppointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nextAppointment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/planEvent"
+            style="@style/ButtonStyle"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_border"
+            android:text="neues Event"
+            android:textColor="@color/WhiteSmoke">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutx"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/ButtonStyle"
+            android:id="@+id/logout"
+            android:text="@string/logout"
+            android:layout_gravity="bottom"
+            android:background="@drawable/button_border"
+            android:textColor="@color/WhiteSmoke"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="2dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="platzhalter"
+            android:visibility="invisible"
+            android:layout_weight="1">
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chatButton"
+            style="@style/ButtonStyle"
+            android:background="@drawable/button_border"
+            android:text="@string/chat"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="bottom"
+            android:textColor="@color/WhiteSmoke" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

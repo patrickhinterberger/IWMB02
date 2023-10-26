@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "488894986886",
+    "project_id": "appointy-login-register",
+    "storage_bucket": "appointy-login-register.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488894986886:android:50a2f1a718ac816ed8af07",
+        "android_client_info": {
+          "package_name": "com.example.appointy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcsYShKhtajYJDVvlM1Qps3f51Ov1ZEs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
